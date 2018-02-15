@@ -1,0 +1,9 @@
+<div ng-controller="AlertController as alert_ctrl">
+    <uib-alert
+         ng-repeat="alert in alert_ctrl.alerts"
+         dismiss-on-timeout="{{alert.timeout}}"
+         type="{{alert.type}}"
+         close="alert_ctrl.closeAlert($index)">
+            {{alert.msg}}
+    </uib-alert>
+</div>

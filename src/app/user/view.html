@@ -1,0 +1,32 @@
+<div ng-controller="UserItemController as user_item_ctrl">
+
+    <h2>Просмотр карточки пользователя</h2>
+
+    <table class="table table-striped" ng-if="!data.error">
+      <thead>
+      <tr>
+        <th>Имя</th>
+        <th>Значение</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>ID</td>
+        <td>{{data.item.id}}</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>{{data.item.email}}</td>
+      </tr>
+      <tr>
+        <td>Имя</td>
+        <td>{{data.item.username}}</td>
+      </tr>
+      <tr>
+        <td>Статус</td>
+        <td>{{data.item.status}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+</div>

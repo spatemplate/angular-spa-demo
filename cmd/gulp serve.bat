@@ -1,0 +1,3 @@
+cd ..
+gulp serve
+pause

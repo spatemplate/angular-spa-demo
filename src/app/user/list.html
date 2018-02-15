@@ -1,0 +1,56 @@
+<div ng-controller="UserController">
+
+    <span ng-if="!data.error" class="pull-right">
+        <a class="btn btn-success" ui-sref="user/create">
+            <i class="fa fa-plus"></i>
+            &nbsp;&nbsp;Добавить
+        </a>
+    </span>
+
+    <h2>Список пользователей</h2>
+
+  <div ng-if="!data.error">
+      <table class="table table-striped" ng-show="data.data.length">
+          <thead>
+          <tr>
+              <th>ID</th>
+              <th>Имя</th>
+              <th>Email</th>
+              <th>Статус</th>
+              <th>Действия</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat="user in data.data">
+              <td>{{user.id}}</td>
+              <td>
+                  <a class="btn btn-xs" href="#/user/{{user.id}}/view" title="Просмотреть карточку">
+                      {{user.username}}
+                  </a>
+              </td>
+              <td>
+                  <a class="btn btn-xs" href="#/user/{{user.id}}/view" title="Просмотреть карточку">
+                      {{user.email}}
+                  </a>
+              </td>
+              <td>{{user.status > 0 ? 'Активен' : 'Заблокирован'}}</td>
+              <td>
+                  <a class="btn btn-xs" href="#/user/{{user.id}}/update" title="Редактировать">
+                      <i class="fa fa-pencil"></i>
+                      Редактировать
+                  </a>
+                  <a class="btn btn-xs" href="#/user/{{user.id}}/delete" title="Удалить">
+                      <i class="fa fa-trash text-danger"></i>
+                      Удалить
+                  </a>
+              </td>
+          </tr>
+          </tbody>
+      </table>
+
+      <div ng-show="data.data.length == 0">
+          <i class="text-muted">Нет данных</i>
+      </div>
+  </div>
+
+</div>
