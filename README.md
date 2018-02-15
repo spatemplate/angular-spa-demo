@@ -1,13 +1,13 @@
 SPA
 ===================
 
-## —крипты
+## Скрипты
 
-* **gulp buld** - сборка дл¤ продакшн
+* **gulp buld** - сборка для продакшн
 * **gulp serve** - запуск локального сервера
 * **deploy** - отправка сборки на сервер
 
-## ”становка
+## Установка
 
 * `git clone git@bitbucket.org:bxon/angular.git`
 * `npm install bower gulp -g`
